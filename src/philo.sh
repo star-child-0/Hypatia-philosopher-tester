@@ -1,8 +1,19 @@
-#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    philo.sh                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: anvannin <anvannin@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/06/29 19:51:32 by anvannin          #+#    #+#              #
+#    Updated: 2023/06/29 20:18:54 by anvannin         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 # color codes
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
 BOLD='\033[1m'
 UNSET='\033[0m'
 
@@ -12,17 +23,7 @@ if ! [[ -d "philo" ]]; then
 	exit
 fi
 
-# execute norminette on all .c and .h files in the current project folder
-# instead of printing "OK!" messages, print "Norminette OK!" if there are no errors
-# if there are any errors, print "Norminette KO!" and the errors
-if [[ -z $(find . '(' -type f -name "*.c" -o -name "*.h" ')' -exec norminette {} \; | grep -v "OK!") ]]; then
-	echo -e "${GREEN}${BOLD}Norminette OK!${NC}${UNSET}"
-else
-	echo -e "${RED}${BOLD}Norminette KO!${UNSET}"
-	echo -e "${RED}$(find . '(' -type f -name "*.c" -o -name "*.h" ')' -exec norminette {} \; | grep -v "OK!")${UNSET}"
-fi
-
-cd ../philo
+cd philo
 
 # if the makefile exists, print a success message
 # if it does not exist, print an error message
@@ -67,4 +68,10 @@ if make re > /dev/null 2>&1; then
 	echo -e "${GREEN}${BOLD}Make re OK!${UNSET}"
 else
 	echo -e "${RED}${BOLD}Make re KO!${UNSET}"
+fi
+
+if make bonus > /dev/null 2>&1; then
+	echo -e "${GREEN}${BOLD}Make bonus OK!${UNSET}"
+else
+	echo -e "${YELLOW}${BOLD}Make bonus missing...${UNSET}"
 fi
