@@ -13,6 +13,19 @@ Ancient sources record that Hypatia was widely beloved by pagans and Christians 
 
 However, this project is not about her, but about the dining philosophers problem.
 
+## 📖 Overview
+
+This project is my tester for the philosophers project at 42 Florence. It is a simple bash script that checks if your project is norminette compliant and compiles it.
+
+__DO NOT__ use this tester as a replacement for you evaluating your own project or your peers', but as a tool to help you find errors in your code and to help you streamline your workflow, so that you can spend more time on the important stuff, and I don't mean just the project itself, but the learning process as well, so I highly encourage you to do your own research and try to write your own tests.
+
+GLHF!
+
+<p align="center">
+	<img alt="anvannin's hypatia languages" src="https://img.shields.io/github/languages/top/star-child-0/Hypatia-philosopher-tester?color=red">
+	<img alt="anvannin's hypatia repo-size" src="https://img.shields.io/github/repo-size/star-child-0/Hypatia-philosopher-tester?color=green">
+	<img alt="anvannin's hypatia lines" src="https://img.shields.io/tokei/lines/github.com/star-child-0/Hypatia-philosopher-tester?color=blue">
+</p>
 
 ## ⚙️ Installation
 
