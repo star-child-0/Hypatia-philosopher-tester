@@ -6,7 +6,7 @@
 #    By: anvannin <anvannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/29 19:51:32 by anvannin          #+#    #+#              #
-#    Updated: 2023/06/29 20:18:54 by anvannin         ###   ########.fr        #
+#    Updated: 2023/07/01 16:31:13 by anvannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,14 @@ else
 	echo -e "${RED}${BOLD}NAME rule KO!${UNSET}"
 fi
 
+if grep -q ".*" Makefile; then
+	echo -e "${RED}${BOLD}Wildcards KO!${UNSET}"
+elif grep -q "*." Makefile; then
+	echo -e "${RED}${BOLD}Wildcards KO!${UNSET}"
+else
+	echo -e "${GREEN}${BOLD}Wildcards OK!${UNSET}"
+fi
+
 # try to compile using make, and hide the output
 # if it fails, print an error message and hide the output
 # if it succeeds, print a success message
@@ -70,6 +78,9 @@ else
 	echo -e "${RED}${BOLD}Make re KO!${UNSET}"
 fi
 
+# the bonus rule technically does not apply to this project
+# because the bonus part is a different project with its own makefile
+# but I check if the rule exists for the sake of completeness :)
 if make bonus > /dev/null 2>&1; then
 	echo -e "${GREEN}${BOLD}Make bonus OK!${UNSET}"
 else

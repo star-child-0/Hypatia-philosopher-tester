@@ -6,7 +6,7 @@
 #    By: anvannin <anvannin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/29 19:51:28 by anvannin          #+#    #+#              #
-#    Updated: 2023/06/29 20:18:47 by anvannin         ###   ########.fr        #
+#    Updated: 2023/06/30 21:47:42 by anvannin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ YELLOW='\033[1;33m'
 BOLD='\033[1m'
 UNSET='\033[0m'
 
-echo -e "${BLUE}${BOLD} $(< $(find . -name "banner")) ${YELLOW}\nlet's get started...\n${UNSET}"
+echo -e "${BLUE}${BOLD} $(< $(find . -name "banner"))${UNSET}"
+echo -e "${YELLOW}          let's get started...\n${UNSET}"
 
 if [[ $1 == "norminette" ]]; then
 	./hypatia/src/norminette.sh
