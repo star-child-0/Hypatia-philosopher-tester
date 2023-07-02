@@ -47,11 +47,13 @@ If you want to run only a specific test, you can do so by running the following 
 ```
 ./hypatia/tester.sh <test_name>
 ```
-where `<test_name>` is the name of the test you want to run:
+where `<test_name> [timeout]` is the name of the test you want to run:
 - `norminette`: checks if your project is norminette compliant
-- `philo`: compiles your project
+- `make`: compiles your project and checks if the various rules are present
+- `philo`: compiles your project and runs tests on it
+- `timeout`: the time in seconds after which the test will be terminated, if not specified, the tests will terminate after 15 seconds (applies only to `philo` test)
 
-_Other tests will be added in the future._
+_Note: works only on the mandatory part of the project, bonus part will be added in the future._
 
 ## 🤝 Contributing
 
